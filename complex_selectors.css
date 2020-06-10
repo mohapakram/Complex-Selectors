@@ -1,0 +1,202 @@
+/* Child */
+
+/* Descendant Selector*/
+article h2 {
+  ...;
+}
+
+/* Direct Child Selector */
+article > p {
+  ...;
+}
+
+/* Sibling Selectors */
+
+/* General Sibling Selector */
+h2 ~ p {
+  ...;
+}
+/* The h2 ~ p selector is a general sibling selector that looks for p elements that follow, and share the same parent, of any h2 elements.
+ In order for a p element to be selected it must come after any h2 element. */
+
+/* Adjacent Sibling Selector */
+h2 + p {
+  ...;
+}
+
+/* Attribute Selectors */
+
+/* Attribute Present Selector */
+a[target] {
+  ...;
+}
+
+/* Attribute Equals Selector */
+a[href="http://google.com/"]
+{
+  ...;
+}
+
+/* Attribute Contains Selector */
+a[href*="login"] {
+  ...;
+}
+
+/* Attribute Begins With Selector */
+a[href^="https://"]
+{
+  ...;
+}
+
+/* Attribute Ends With Selector */
+a[href$=".pdf"] {
+  ...;
+}
+
+/* Attribute Spaced Selector */
+a[rel~="tag"] {
+  ...;
+}
+/* At times attribute values may be spaced apart, in which only one of the words needs to be matched in order to make a selection.
+ In this event using the tilde character, ~, within the square brackets of a selector between the attribute name and equals sign denotes an attribute value that should be whitespace-separated, with one word matching the exact stated value. */
+
+/* Attribute Hyphenated Selector */
+a[lang|="en"] {
+  ...;
+}
+
+/* To-Select */
+/* <a href="#" lang="en-US">...</a> */
+
+/* Pseudo-classes */
+
+/* Pseudo-classes select regular elements but under certain conditions, like when their position relative to siblings or when they’re under a particular state. */
+
+/* Link Pseudo-classes */
+
+a:link {
+  ...;
+}
+a:visited {
+  ...;
+}
+
+/* For normal links and when a link is clicked based on the user history */
+
+/* User Action Pseudo-classes */
+a:hover {
+  ...;
+}
+a:active {
+  ...;
+}
+a:focus {
+  ...;
+}
+
+/* User Interface State Pseudo-classes */
+input:enabled {
+  ...;
+}
+input:disabled {
+  ...;
+}
+
+/* Mainly used with Inputs in forms */
+
+input:checked {
+  ...;
+}
+
+input:indeterminate {
+  ...;
+}
+
+/* For checkboxs and radio inputs */
+
+/* Structural & Position Pseudo-classes */
+
+/* :first-child, :last-child, & :only-child */
+li:first-child {
+  ...;
+}
+li:last-child {
+  ...;
+}
+div:only-child {
+  ...;
+}
+/* Here the selector li:first-child identifies the first list item within a list, while the selector li:last-child identifies the last list item within a list, thus lines 2 and 10 are selected.
+The selector div:only-child is looking for a division which is the single child of a parent element, without any other other siblings.
+In this case line 4 is selected as it is the only division within the specific list item. */
+
+/* :first-of-type, :last-of-type, & :only-of-type */
+p:first-of-type {
+  ...;
+}
+p:last-of-type {
+  ...;
+}
+img:only-of-type {
+  ...;
+}
+
+/* :nth-child(n) & :nth-last-child(n) */
+li:nth-child(3n) {
+  ...;
+}
+
+/* :nth-of-type(n) & :nth-last-of-type(n) */
+p:nth-of-type(3n) {
+  ...;
+}
+
+/* Target Pseudo-class */
+section:target {
+  ...;
+}
+
+/* , if a user would visit a page with the URI fragment identifier of #hello, the section with that same ID attribute value would be stylized accordingly using the :target pseudo-class.
+ If the URI fragment identifier changes, and matches the ID attribute value of another section, that new section may be stylized using the same selector and pseudo-class from before. */
+
+/* Empty Pseudo-class */
+div:empty {
+  ...;
+}
+
+/* Negation Pseudo-class */
+div:not(.awesome) {
+  ...;
+}
+
+:not(div) {
+  ...;
+}
+
+/* Pseudo-elements */
+
+/* Pseudo-elements effectively create new elements that are not specified in the markup of the document and can be manipulated much like a regular element.
+ This introduces huge benefits for creating cool effects with minimal markup, also aiding significantly in keeping the presentation of the document out of the HTML and in CSS where it belongs. */
+
+/* Textual Pseudo-elements */
+
+.alpha:first-letter,
+.bravo:first-line {
+  color: #ff7b29;
+  font-size: 18px;
+}
+
+/* Generated Content Pseudo-elements */
+a:after {
+  color: #9799a7;
+  content: " (" attr(href) ")";
+  font-size: 11px;
+}
+
+/* Fragment Pseudo-element */
+::selection {
+  background: #ff7b29;
+}
+
+/* Basically a pseudo-class is a selector that assists in the selection of something that cannot be expressed by a simple selector, for example :hover.
+ A pseudo-element however allows us to create items that do not normally exist in the document tree, for example ``::after`. */
